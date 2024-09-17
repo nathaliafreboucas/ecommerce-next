@@ -1,6 +1,7 @@
 import styles from '@/styles/FormContactInfos.module.css'
-import stylesBotoes from '@/styles/Home.module.css'
 
+/*Componentes */
+import { Button } from './common/Button'
 
 export function FormContactInfos(){
     return (
@@ -24,14 +25,20 @@ export function FormContactInfos(){
                 <form action="./mensagem-enviada.html" className={styles.formulario}>
                     <div className={styles.sessaoUnica}>
                         <p className={styles.formularioLegenda}>Fale Conosco</p>
-                        <div className={`${styles.input} ${styles.inputNome}`}>
+                        <div className={'input inputNome'}>
                             <input name="nome" type="text" id="nome" data-form-nome-rodape />
                             <label htmlFor="nome">Nome</label>
                         </div>
-                        <div className={`${styles.input} ${styles.textarea}`}>
-                            <textarea type="text" id="mensagem" placeholder="Escreva sua mensagem" className={styles.textarea} data-form-mensagem-rodape></textarea>
+                        <div className={'input textarea'}>
+                            <textarea type="text" id="mensagem" placeholder="Escreva sua mensagem" className={'textarea'} data-form-mensagem-rodape></textarea>
                         </div>
-                        <button type="submit" className={stylesBotoes.botoes} id={styles.enviaMensagem} data-form-botao-rodape>Enviar mensagem</button>
+                        <Button 
+                            label={'Enviar Mensagem'}
+                            type={'submit'}
+                            id={styles.enviaMensagem}
+                            data-form-botao-rodape
+                        />
+                        {/* <button type="submit" className={'botoes'} id={styles.enviaMensagem} data-form-botao-rodape>Enviar mensagem</button> */}
                     </div>
                 </form>
             </div>

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+
+/*Componentes */
 import { FormContactInfos } from "@/components/FormContactInfos"
+import {Button} from '@/components/common/Button'
 
 /*Styles */
 import styles from '@/styles/NewProducts.module.css'
-import stylesForms from '@/styles/FormContactInfos.module.css'
-
-/*Componentes */
-import stylesMain from '@/styles/Main.module.css'
 
 /*Service Dados*/
 import { categories } from '@/data/dataUtils'
@@ -38,9 +37,7 @@ export default function AddProduct() {
                     setDescription(obj.description)
                 }
                 localStorage.setItem("idProduct", "")
-
             })
-
     }
     
     useEffect(() => {
@@ -94,11 +91,11 @@ export default function AddProduct() {
     return (
         <>
             <Header />
-            <div className={stylesMain.main}>
+            <div className={'main'}>
                 <div className={styles.formularioNovoProduto}>
                     <form onSubmit={addProduct} className={styles.novoProduto} data-form-adiciona-produto>
                         <legend className={styles.novoProdutoLegenda}>Adicionar novo produto</legend>
-                        <div className={`${stylesForms.input} ${stylesForms.inputNome}`}>
+                        <div className={'input inputNome'}>
                             <input
                                 name="url"
                                 type="text"
@@ -109,12 +106,12 @@ export default function AddProduct() {
                             />
                             <label htmlFor="url">Url da imagem</label>
                         </div>
-                        <div className={`${stylesForms.input} ${stylesForms.inputNome}`}>
+                        <div className={'input inputNome'}>
                             <select
                                 value={category}
                                 name="categoria"
                                 type="text"
-                                className={`${styles.selectCategorie} ${stylesForms.inputNome}`}
+                                className={`${styles.selectCategorie} inputNome`}
                                 id={styles.categoria}
                                 data-categoria
                                 onChange={(e) => { setCategory(e.target.value) }}
@@ -127,7 +124,7 @@ export default function AddProduct() {
                                 }
                             </select>
                         </div>
-                        <div className={`${stylesForms.input} ${stylesForms.inputNome}`}>
+                        <div className={'input inputNome'}>
                             <input
                                 value={nameProduct}
                                 name="produto"
@@ -138,7 +135,7 @@ export default function AddProduct() {
                             />
                             <label htmlFor="produto">Nome do produto</label>
                         </div>
-                        <div className={`${stylesForms.input} ${stylesForms.inputNome}`}>
+                        <div className={'input inputNome'}>
                             <input
                                 value={price}
                                 placeholder="0.00"
@@ -157,23 +154,26 @@ export default function AddProduct() {
                             />
                             <label htmlFor="preco">Preço do produto</label>
                         </div>
-                        <div className={`${stylesForms.input} `}>
+                        <div className={'input'}>
                             <textarea
                                 value={description}
-                                className={stylesForms.textarea}
+                                className={'textarea'}
                                 type="text" id='descricao'
                                 placeholder="Descrição do produto"
                                 data-descricao
                                 onChange={(e) => { setDescription(e.target.value) }}
                             />
                         </div>
-                        <button 
-                            className={styles.botoes} 
-                            id={styles.entrar} 
+                        <Button 
+                            type={'submit'}
+                            label= {editOpen?'Atualizar': 'Enviar'}
+                        />
+                        {/* <button 
+                            className={'botoes'} 
                             type="submit"
                         >
                             {editOpen?'Atualizar': 'Enviar'}
-                        </button>
+                        </button> */}
                     </form>
                 </div>
                 <FormContactInfos />

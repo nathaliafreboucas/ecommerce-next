@@ -6,10 +6,10 @@ import { useState } from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { FormContactInfos } from "@/components/FormContactInfos";
+import {Button} from '@/components/common/Button'
+
 /**Estilos */
-import styles from '@/styles/Login.module.css';
-import stylesCommonButton from "@/styles/Home.module.css";
-import stylesCommonInput from "@/styles/FormContactInfos.module.css";
+import style from '@/styles/Login.module.css';
 
 /**Bibliotecas e serviços */
 import { toast } from 'react-toastify';
@@ -43,20 +43,26 @@ export default function login() {
     return (
         <>
             <Header />
-            <div className={styles.main}>
+            <div className={"main"}>
 
-                <form onSubmit={(e) => authLogin(e)} className={styles.formularioLogin}>
-                    <div className={styles.formLogin}>
-                        <legend className={styles.loginLegenda}>Iniciar Sessão</legend>
-                        <div className={`"${styles.input} ${stylesCommonInput.inputNome}`}>
+                <form onSubmit={(e) => authLogin(e)} className={style.formularioLogin}>
+                    <div className={style.formLogin}>
+                        <legend className={style.loginLegenda}>Iniciar Sessão</legend>
+                        <div className={`"${style.input} inputNome`}>
                             <input name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                             <label htmlFor="email">Digite seu email</label>
                         </div>
-                        <div className={`${styles.input} ${stylesCommonInput.inputNome}`}>
+                        <div className={`${style.input} inputNome`}>
                             <input name="senha" type="password" id="senha" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             <label htmlFor="senha">Digite sua senha</label>
                         </div>
-                        <button className={stylesCommonButton.botoes} id="entrar" type="submit">Entrar</button>
+                        <Button
+                            color={'blue'}
+                            id={'entrar'}
+                            type ={'submit'}
+                            label={'Entrar'}
+                        />
+                        {/* <button className={'botoes'} id="entrar" type="submit">Entrar</button> */}
                     </div>
                 </form>
                 <FormContactInfos />

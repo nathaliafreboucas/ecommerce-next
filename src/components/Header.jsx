@@ -1,5 +1,10 @@
-import styles from "@/styles/Home.module.css";
 import Link from "next/link";
+
+/*Styles */
+import styles from "@/styles/Home.module.css";
+
+/*Componentes */
+import {Button} from '@/components/common/Button'
 
 export function Header({buttonLogin, children}){
     return(
@@ -21,7 +26,12 @@ export function Header({buttonLogin, children}){
                 {buttonLogin && (
                     <div className={styles.botaoLogin}>
                         <Link href={'/login'}>
-                            <button className={styles.botaoBranco} data-botao-login>Login</button>
+                            <Button 
+                                label={'Login'}
+                                color={'white'}
+                                data-botao-login
+                            />
+                            {/* <button className={'botaoBranco'} data-botao-login>Login</button> */}
                         </Link>
                     </div>)
                 }

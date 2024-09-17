@@ -5,10 +5,6 @@ import { SectionMain } from "@/components/SectionMain.jsx"
 import { CardProduct } from '@/components/CardProduct.jsx';
 import { getProducts } from "@/service/productsService";
 
-/**Styles */
-import styles from "@/styles/Main.module.css"
-
-
 export function Main({ children }) {
     const [listProducts, setListProducts] = useState([]);
 
@@ -20,9 +16,8 @@ export function Main({ children }) {
             })
     },[])
 
-
     return (
-        <div className={styles.main}>
+        <div className={"main"}>
             <SectionMain titleSection={'Star Wars'}>
             {listProducts.length > 0 && listProducts.filter((data) => data.category === 'starwars').length > 0?
                     listProducts.filter((data) => data.category === 'starwars')
@@ -39,7 +34,7 @@ export function Main({ children }) {
                     <span>Não há produtos nessa categoria.</span>
                 }
             </SectionMain>
-            <SectionMain titleSection={'Consoles'}>
+            <SectionMain titleSection={'Consoles'} id={'consoles'}>
                 {listProducts.length > 0 && listProducts.filter((data) => data.category === 'consoles').length > 0?
                     listProducts.filter((data) => data.category === 'consoles')
                     .map((item) => {

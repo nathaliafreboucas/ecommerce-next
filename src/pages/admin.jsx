@@ -6,11 +6,10 @@ import { Header } from "@/components/Header";
 import { FormContactInfos } from "@/components/FormContactInfos";
 import CardProductAdmin from '@/components/CardProductAdmin';
 import ConfirmDelete from '@/components/Modals/ConfirmDelete'
+import { Button } from "@/components/common/Button";
 
 /*Estilos */
 import styles from '@/styles/SectionMain.module.css';
-import stylesMain from "@/styles/Main.module.css";
-import stylesCommon from "@/styles/Home.module.css";
 import stylesAdmin from "@/styles/AdminProducts.module.css";
 
 /*Service */
@@ -49,12 +48,16 @@ export default function Admin() {
     return (
         <>
             <Header />
-            <div className={stylesMain.main}>
+            <div className={'main'}>
                 <section className={`${styles.sessaoPrincipal}  ${stylesAdmin.infoSessao}`}>
                     <div className={styles.infoSessao}>
                         <h1>Todos os produtos</h1>
                         <Link href={'/addProducts'}>
-                            <button className={stylesCommon.botoes}>Adicionar produto</button>
+                            <Button 
+                                color={'blue'}
+                                label={'Adicionar produto'}
+                            />
+                            {/* <button className={'botoes'}>Adicionar produto</button> */}
                         </Link>
                     </div>
                     <div className={styles.sessoes} data-todos-produtos>

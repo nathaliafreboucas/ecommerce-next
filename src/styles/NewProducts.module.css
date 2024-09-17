@@ -1,4 +1,3 @@
-.botaoBranco{padding: .8rem 2rem;}
 
 .formularioNovoProduto{
     display: flex;
@@ -18,13 +17,7 @@
     color: #464646;
     margin-bottom: 1.2rem;
 }
-.botoes{
-    width: 100%;
-    padding: 0.7rem 1rem;
-    background-color: #2A7AE4;
-    border: transparent;
-    color: #F5F5F5;
-}
+
 .selectCategorie{
     width: 100%;
     border: transparent;
