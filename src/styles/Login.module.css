@@ -1,0 +1,35 @@
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E5E5;
+}
+.input input{
+    box-sizing: border-box;
+}
+.formularioLogin{
+    display: flex;
+    justify-content: center;
+}
+.formLogin{
+    margin: 4rem 0;
+    width: 30%;
+    min-width: 300px;
+}
+.loginLegenda{
+    text-align: center;
+    font-weight: 700;
+    color: #464646;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+.menuFormulario{
+    margin-top: 0;
+}
+#entrar{
+    width: 100%;
+    padding: 1.2rem;
+    font-weight: 600;
+
+}
