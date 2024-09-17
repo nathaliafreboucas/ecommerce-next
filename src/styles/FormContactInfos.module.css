@@ -1,0 +1,98 @@
+.menuFormulario{
+    background-color: #EAF2FD;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.conteudoMenuFormulario{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 3rem 0;
+    max-width: 1500px;
+}
+.logoMenu{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.logoRodape{
+    align-self: flex-start;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+}
+.menu li a{
+   font-weight: 500; 
+   color: #464646 ;
+   text-decoration: none;
+}
+
+.formulario{
+    display: flex;
+    width: 40%;
+}
+.sessaoUnica{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.formularioLegenda{
+    font-weight: 700;
+    color: #464646;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+#enviaMensagem{
+    width: 40%;
+}
+/*Resposivo*/
+
+@media screen and (max-width: 648px){
+    .conteudoMenuFormulario{
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        padding-bottom: 0;
+    }
+    .menu, .formulario, #enviaMensagem {margin-bottom: 1.5rem;}
+    .logoRodape{
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .logoMenu{
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu{
+        line-height: 2rem;
+        text-align: center;
+    }
+    .formulario{width: 100%;}
+    #enviaMensagem{width: 100%;}
+}
+
+@media screen and (min-width: 650px) and (max-width:940px){
+    .conteudoMenuFormulario{
+        width: 90%;
+        justify-content: space-between;
+    }
+    .logoMenu{
+        width: 30%;
+        flex-direction: column;
+        justify-content: flex-start;
+        line-height: 3rem;
+    }
+    .logoRodape{margin-bottom: 1rem;}
+    .formulario{
+        width: 60%;
+        height: 100%;
+    }
+    .sessaoUnica{justify-content: flex-start;}
+}

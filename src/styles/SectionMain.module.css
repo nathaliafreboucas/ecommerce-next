@@ -1,0 +1,57 @@
+.sessaoPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    max-width: 1500px;
+    margin-bottom: 2.5rem;
+}
+.sessoes{
+    display: flex;
+    gap: 2rem; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.infoSessao{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.6rem;
+    align-items: center;
+}
+.infoSessao h1{
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #464646;
+}
+.infoSessao a{
+   text-decoration: none;
+   color:#2A7AE4;
+   font-weight: 700;
+   font-size: .8rem;
+}
+.seta{
+    vertical-align: text-top;
+
+}
+
+/*rESPONSIVO*/
+
+@media screen and (max-width: 480px){
+    .sessaoPrincipal{margin-top: 1.5rem;}
+    .infoSessao h1{font-size: 1.5rem;}
+    .infoSessao a{font-size: 1rem;}
+    .sessoes{
+        width: 80%;
+        flex-wrap: wrap;
+    }
+  
+}
+
+@media screen and (min-width: 481px) and (max-width:940px){
+    .infoSessao h1{font-size: 1.5rem;}
+    .infoSessao a{font-size: 1rem;}
+    .infoSessao, .sessoes{width: 90%;}
+}
+

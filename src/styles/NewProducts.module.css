@@ -1,0 +1,41 @@
+
+.formularioNovoProduto{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    max-width: 1500px;
+    margin:auto
+}
+.novoProduto{
+    width: 45%;
+    display: flex;
+    flex-direction: column
+}
+.novoProdutoLegenda{
+    font-weight: 700;
+    font-size: 2rem;
+    color: #464646;
+    margin-bottom: 1.2rem;
+}
+
+.selectCategorie{
+    width: 100%;
+    border: transparent;
+    background-color: white;
+    color: #A2A2A2;
+    border-radius: 5px;
+    border-bottom: 1px solid #C8C8C8;
+    padding: 0 0 0 0.5rem;
+}
+
+.selectCategorie option{
+    color: #464646;
+}
+
+/*Responsivo*/
+@media screen and (max-width:940px){
+    .novoProduto{
+        width: 90%;
+    }
+
+}

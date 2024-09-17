@@ -1,27 +1,23 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html{
+  scroll-behavior: smooth;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
+html,body{
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100vh;
 }
 
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-areas: 
+      'header'
+      'main'
+      'footer';
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+
 }
 
 * {
@@ -34,9 +30,104 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.main{
+  background-color: #E5E5E5;
+  grid-area: main;
+  padding: 3rem 0 0 0;
+}
+.botoes{
+  width: 7rem;
+  padding: 0.7rem 1rem;
+  background-color: #2A7AE4;
+  border: transparent;
+  color: #F5F5F5;
+  max-width: 1500px;
+}
+.botaoBranco{
+  width: 100%;
+  height: 50%;
+  border: 1px solid #2A7AE4;
+  background-color: white;
+  color: #2A7AE4;
+  padding: 0.8rem 3.7rem;
+}
+.inputNome{
+  position: relative;
+  margin-bottom: 1rem;
+  height: 3rem;
+}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+
+.inputNome input{
+  width: 100%;
+  height: 3rem;
+  background-color: #ffff;
+  border: transparent;
+  border-radius: 5px;
+  border-bottom: 1px solid #C8C8C8;
+  padding: 0.5rem 0 0 0.5rem;
+  transition:  .3s ;
+  
+}
+
+.inputNome label{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  bottom: 0;
+  right: 0;
+  margin-top: 13px;
+  transition: .3s;
+  color: #A2A2A2;
+  font-weight: 400;
+  font-size: 15px;
+
+}
+
+.inputNome input:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;  
+}
+
+.inputNome input:focus + label, .inputNome input:not(placeholder-shown) + label{
+  margin-top: 0px;
+  top: 5px;
+  font-size: 13px;
+  transition: 0.2s;
+  margin-bottom: 2rem;
+} 
+
+
+.input input, .textarea{
+  box-sizing: border-box;
+}
+
+.textarea{
+  width: 100%;
+  height: 3rem;
+  resize: none;
+  border: transparent;
+  border-bottom: 1px solid #C8C8C8;
+  margin-bottom: 1rem;
+}
+.textarea::placeholder{
+  color: #A2A2A2;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  padding: 0.7rem 0 0 0.7rem;
+
+}
+.textarea:focus{
+  box-shadow: 0;
+  outline: 0;
+}
+
+/*Login*/
+
+#entrar{
+  width: 100%;
+  padding: 1.2rem;
+  font-weight: 600;
+
 }

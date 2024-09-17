@@ -1,0 +1,29 @@
+.nomeProduto{
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: #464646;
+}
+.preco{
+    font-weight: 700;
+    font-size: 0.8;
+    color: #464646;
+}
+.infoProduto{
+    text-decoration: none;
+    color: #2A7AE4;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.caixa{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    flex-basis: 150px
+ }
+ .caixaImg{
+     width: 150px;
+     height: 150px;
+ }
+
+ /*Responsivo*/
